@@ -1,0 +1,25 @@
+<div class="panel panel-primary">
+    <!--<div class="panel-body">-->
+        <!--<h3></h3>-->
+    <!--</div>-->
+    <table class="table">
+        <thead>
+            <tr>
+                {% for key, value in result['records'][0].items() %}
+                    <th>{{ key }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+        {% for records in result['records'] %}
+            <tr>
+                {% for key, value in records.items() %}
+                    <td>
+                        {{ value }}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

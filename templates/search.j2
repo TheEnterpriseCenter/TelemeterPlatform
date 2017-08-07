@@ -1,7 +1,6 @@
-<form action="{{ url_for("search_experiments") }}" class="input-group" method="post">
-    <input type="text" class="form-control" placeholder="Search experiments..." name = "tags">
+<form class="input-group" method="post">
+    <input type="text" class="form-control" placeholder="Search experiments..." name = search_form>
     <span class="input-group-btn">
         <button class="btn btn-default mtc-btn" type=submit>Search</button>
-        <input type="hidden" name="action" value="search">
     </span>
 </form>

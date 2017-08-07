@@ -4,52 +4,108 @@
         <div class="panel-body">
             {# We'll do an if logged in, then do this navbar, else
                 else do other #}
-            {%  include 'nav_bar_default.j2' %}
+            {%  include 'nav_bar_index.j2' %}
+            {%  include 'nav_bar_admin.j2' %}
             {%  include 'search.j2' %}
+            {%  include 'nav_bar_dev.j2' %}
         </div>
     </div>
 {% endblock %}
 
 {% block body %}
-<div class="row">
-    <div class="col-lg-12">
-    <form method="post">
-        <div class="panel panel-primary panel-table">
-            <div class="panel-heading text-center">Assets Table</div>
-            <div class="panel-body">
+
+
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="panel panel-default panel-table">
+              <div class="panel-heading text-center">Assets Table</div>
+
+              <div class="panel-body">
                 <table class="table table-striped table-bordered table-list">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>IP Address</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for asset in assets['records'] %}
-                            <tr>
-                                <td class="text-center">
-                                    <input type="radio" name="asset_select" value="{{ asset.id }}">
-                                </td>
-                                <td>{{ asset.name }}</td>
-                                <td>{{ asset.location }}</td>
-                                <td>{{ asset.ip_address }}</td>
-                            </tr>
-                        {% endfor %}
-                    </tbody>
+                  <thead>
+                    <tr>
+
+                        {# michaelwashere #}
+                        {# in pgAdmin the asset table has no columns for me, so I can not build a guide for you here#}
+
+                        {# These are the headers#}
+                        <th></th>  {# empty header for the radio button column#}
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Organization</th>
+                        <th>Role</th>
+                        <th>Upload ID</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+
+                        {# michaelwashere #}
+                        {# put a loop here filling each field from database#}
+                        {# again no guide, sorry#}
+
+                          <tr>
+                            <td>
+                              <div class="radio">
+                                    {# I would find a way to tie the name of the radio button to a location in the table
+                                        and then tie that location to the delete button below#}
+                                  <label><input type="radio" name="optradio"></label>
+                              </div>
+
+                            </td>
+                            <td>ID Here</td>
+                            <td>First Name Here</td>
+                            <td>Last Name Here</td>
+                            <td>Phone Here</td>
+                            <td>Email Here</td>
+                            <td>Organization Here</td>
+                            <td>Role Here</td>
+                            <td>Upload ID Here</td>
+                          </tr>
+                        {# end loop here#}
+
+                  </tbody>
+
                 </table>
-            </div>
-            <div class="panel-footer">
-                <div class="row btn-group" role="group">
-                    <button type="submit" name="user_action" value="delete" class="btn btn-default btn-danger">Delete Selected Asset</button>
-                    <button type="submit" name="user_action" value="modify" class="btn btn-default btn-warning">Modify Selected Asset</button>
+
+              </div>
+
+              <div class="panel-footer">
+                <div class="row">
+                    <div class="col-12">
+
+                        {# michaelwashere #}
+                        {# tie this button to the proper radio button#}
+                        {# if you can i recommend a confirmation box to appear for this delete button, and all other delete buttons#}
+
+                        <button type="button" class="btn btn-default btn-danger">Delete Selected Asset</button>
+
+                    </div>
+
                 </div>
+              </div>
+
+
+
             </div>
+
         </div>
-    </form>
     </div>
-</div>
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
 
 {% block footer %}

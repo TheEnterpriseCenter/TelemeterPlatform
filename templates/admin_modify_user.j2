@@ -4,75 +4,62 @@
         <div class="panel-body">
             {# We'll do an if logged in, then do this navbar, else
                 else do other #}
-            {%  include 'nav_bar_default.j2' %}
+            {%  include 'nav_bar_index.j2' %}
+            {%  include 'nav_bar_admin.j2' %}
             {%  include 'search.j2' %}
+            {%  include 'nav_bar_dev.j2' %}
         </div>
     </div>
 {% endblock %}
 
 {% block body %}
 <div class="col-lg-6 col-md-offset-0 col-md-6 col-md-offset-5">
-    <div class="panel panel-primary">
-        <div class="panel-heading text-center">Profile Information</div>
 
-        <div class="panel-body">
-            <form class="form-horizontal" method="post">
-                <div class="form-group row">
-                    <label for="first" class="col-lg-4 col-md-5 control-label">First Name</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="text" value="{{ user.first }}" id="first" name="first">
+    <div class="panel panel-primary">
+                <div class="panel-heading text-center">Profile Information</div>
+                <div class="panel-body">
+
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-lg-3 col-md-5 col-form-label">First Name</label>
+                        <div class="col-10">
+                        <input class="form-control" type="text" value="Put First Name Here" id="example-text-input">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="last" class="col-lg-4 col-md-5 control-label">Last Name</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="text" value="{{ user.last }}" id="last" name="last">
+
+                    <div class="form-group row">
+                      <label for="example-text-input" class="col-lg-3 col-md-5 col-form-label">Last Name</label>
+                      <div class="col-10">
+                        <input class="form-control" type="text" value="Put Last Name Here" id="example-text-input">
+                      </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="phone" class="col-lg-4 col-md-5 control-label">Telephone Number</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="text" value="{{ user.phone }}" id="phone" name="phone">
+
+                    <div class="form-group row">
+                      <label for="example-tel-input" class="col-lg-3 col-md-5 col-form-label">Telephone Number</label>
+                      <div class="col-10">
+                        <input class="form-control" type="tel" value="Put Phone Here" id="example-tel-input">
+                      </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="email" class="col-lg-4 col-md-5 control-label">Email</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="text" value="{{ user.email }}" id="email" name="email">
+
+                    <div class="form-group row">
+                      <label for="example-email-input" class="col-lg-3 col-md-5 col-form-label">Email</label>
+                      <div class="col-10">
+                        <input class="form-control" type="email" value="Put Email Here" id="example-email-input">
+                      </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="org" class="col-lg-4 col-md-5 control-label">Organization</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="text" value="{{ user.org }}" id="org" name="org">
+
+                    <div class="form-group row">
+                      <label for="example-text-input" class="col-lg-3 col-md-5 col-form-label">Organization</label>
+                      <div class="col-10">
+                        <input class="form-control" type="text" value="Put Organization Here" id="example-text-input">
+                      </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label class="col-lg-4 col-md-5 control-label">Role</label>
-                    <div class="col-lg-6 col-md-8">
-                        <label class="radio-inline">
-                            <input type="radio" name="role" value="teacher"
-                            {% if user.role == "teacher" %}
-                                checked="true"
-                            {% endif %}>
-                            Teacher
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="role" value="technician"
-                            {% if user.role == "technician" %}
-                                checked="true"
-                            {% endif %}>
-                            Technician
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="role" value="admin"
-                            {% if user.role == "admin" %}
-                                checked="true"
-                            {% endif %}>
-                            Administrator
-                        </label>
-                    </div>
-                </div>
+
+                    <label class="radio-inline"><input type="radio" name="optradio">Teacher</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Technician</label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Administrator</label>
+
+                    <h1></h1>
+
 
                     {# michaelwashere #}
                     {# when creating a brand new user this field is not there, this was intentional#}
@@ -80,21 +67,24 @@
                     {# so basically, don't forget to leave it blank if there is no upload_id#}
                     {# or if you decide that you want to add it to create new user just copy it all#}
 
-                <div class="form-group row">
-                    <label for="uploadid" class="col-lg-4 col-md-5 control-label">Upload ID</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="text" value="{{ current_user.uploadid }}" id="uploadid" name="uploadid">
+                    <div class="form-group row">
+                      <label for="example-text-input" class="col-lg-3 col-md-5 col-form-label">Upload ID</label>
+                      <div class="col-10">
+                        <input class="form-control" type="text" value="Put Upload ID Here" id="example-text-input">
+                      </div>
                     </div>
-                </div>
+
                     {# copy to here #}
-                <div class="form-group row">
-                    <div class="col-lg-offset-4 col-md-offset-5 col-lg-3 col-md-6">
-                        <button type="submit" class="btn btn-default mtc-btn">Update Profile</button>
+
+
+
+
+                    <div class="row">
+                        <div class="col-12 text-left">
+                            <button type="button" class="btn btn-default mtc-btn">Save Information</button>
+                        </div>
                     </div>
                 </div>
-                <input type="hidden" name="profile_action" value="profile">
-            </form>
-        </div>
     </div>
 </div>
 
@@ -102,26 +92,31 @@
     <div class="panel panel-primary">
         <div class="panel-heading text-center">Change Password</div>
         <div class="panel-body">
-            <form class="form-horizontal" method="post">
-                <div class="form-group row">
-                    <label for="new_pass" class="col-lg-4 col-md-5 control-label">New Password</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="password" value="" id="new_pass" name="new_pass">
-                    </div>
+
+            <div class="form-group row">
+
+                    <label for="example-password-input" class="col-lg-3 col-md-5 col-form-label">Enter Password</label>
+
+              <div class="col-10 col-sm-offset-0">
+                <input class="form-control" type="password" value="" id="example-password-input">
+              </div>
+            </div>
+
+            <div class="form-group row">
+
+                    <label for="example-password-input" class="col-lg-3 col-md-5 col-form-label">Confirm Password</label>
+
+              <div class="col-10 col-sm-offset-0">
+                <input class="form-control" type="password" value="" id="example-password-input">
+              </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 text-left">
+                    <button type="button" class="btn btn-default mtc-btn">Save Password</button>
                 </div>
-                <div class="form-group row">
-                    <label for="new_pass_confirm" class="col-lg-4 col-md-5 control-label">Confirm New Password</label>
-                    <div class="col-lg-4 col-md-8">
-                        <input class="form-control" type="password" value="" id="new_pass_confirm" name="new_pass_confirm">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-7">
-                        <button type="submit" class="btn btn-default mtc-btn">Update Password</button>
-                    </div>
-                </div>
-                <input type="hidden" name="profile_action" value="password">
-            </form>
+            </div>
         </div>
     </div>
 </div>
