@@ -1,0 +1,254 @@
+{% extends "layout.j2" %}
+{% block header %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {# We'll do an if logged in, then do this navbar, else
+                else do other #}
+            {%  include 'nav_bar_dev.j2' %}
+            {%  include 'nav_bar_index.j2' %}
+            {%  include 'search.j2' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-lg-6 col-md-offset-0 col-md-6 col-md-offset-5">
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Experiment Information</div>
+            <div class="panel-body">
+
+                <div class="col-lg-offset-0">
+                    <div class="container col-lg-6">
+
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label">Experiment Name</label>
+                            <div class="col-10">
+                            <input class="form-control" type="text" value="Enter Experiment Name" id="example-text-input">
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-default mtc-btn">New Experiment</button>
+                            </div>
+
+                            <div>
+                                <div class="col-12 col-sm-offset-1">
+                                    <button type="button" class="btn btn-default btn-success">Save Experiment</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                            <div class="col-12 col-sm-offset-0">
+                                <button type="button" class="btn btn-default btn-success">Start Experiment</button>
+                            </div>
+                            <div class="col-12 col-sm-offset-1">
+                                <button type="button" class="btn btn-default btn-danger">Stop Experiment</button>
+                            </div>
+                    </div>
+                    <div>
+                            <h1></h1>
+
+                            {# michaelwashere #}
+                            {# Display text here for status of experiment#}
+                            <p>Experiment Status >>></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Experiment Clip Controls</div>
+            <div class="panel-body">
+
+                <div class="col-lg-offset-0">
+                    <div class="container col-lg-6">
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Clip Name</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" value="Enter Clip Name" id="example-text-input">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-offset-0">
+                                    <button type="button" class="btn btn-default mtc-btn">New Clip</button>
+                                </div>
+
+                                <div class="col-12 col-sm-offset-1">
+                                    <button type="button" class="btn btn-default btn-success">Save Clip</button>
+                                </div>
+
+                                <div class="col-12 col-sm-offset-1">
+                                    <button type="button" class="btn btn-default btn-danger">Discard Clip</button>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-offset-0">
+                            <button type="button" class="btn btn-default btn-success">Start Recording</button>
+                        </div>
+
+                        <div class="col-12 col-sm-offset-1">
+                            <button type="button" class="btn btn-default btn-danger">Stop Recording</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h1></h1>
+
+                        {# michaelwashere #}
+                        {# Display text here for status of experiment#}
+                        <p>Recording Status >>></p>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-offset-0 col-md-6 col-md-offset-5">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Student Emails</div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label for="comment">One email address per line please.</label>
+                    <textarea class="form-control" rows="3" id="comment"></textarea>
+                    </div>
+
+                        {# michaelwashere #}
+                        {# if we dont use the text area to enter the emails, here is the field for it #}
+                        {#        <div class="form-group row">
+                                    <label for="example-text-input" class="col-2 col-form-label">Student Email</label>
+                                    <div class="col-10">
+                                    <input class="form-control" type="text" value="placeholder2" id="example-text-input">
+                                    </div>
+                                </div>   #}
+
+                <div class="row">
+
+
+                    {# michaelwashere #}
+                    {# button may or may not be used, depending on use of textfield #}
+                    {#<div class="col-12">
+                        <button type="button" class="btn btn-default mtc-btn">New Email</button>
+                    </div>#}
+
+                    <div>
+                        <div class="col-12 col-sm-offset-0">
+                            <button type="button" class="btn btn-default btn-success">Save Email Addresses to Experiment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Experiment Tags</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="comment">One tag per line please.</label>
+                    <textarea class="form-control" rows="3" id="comment"></textarea>
+                </div>
+
+                <div>
+                    <div class="col-12 col-sm-offset-0">
+                        <button type="button" class="btn btn-default btn-success">Save Tags to Experiment</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{# michaelwashere #}
+{# Below this line to the ENDBLOCK is extra that needs to be removed for release. Left for chance it might be used. #}
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+        {# This is a vertical spacer #}
+        <h1></h1>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Experiment Clip Controls</div>
+            <div class="panel-body">
+
+                <div class="col-lg-offset-4">
+                    <div class="container col-lg-4">
+
+                            <div class="form-group row">
+                                <label for="example-text-input" class="col-2 col-form-label">Clip Name</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" value="Enter Clip Name" id="example-text-input">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-offset-0">
+                                    <button type="button" class="btn btn-default mtc-btn">New Clip</button>
+                                </div>
+
+                                <div class="col-12 col-sm-offset-0">
+                                    <button type="button" class="btn btn-default btn-success">Save Clip</button>
+                                </div>
+
+                                <div class="col-12 col-sm-offset-0">
+                                    <button type="button" class="btn btn-default btn-danger">Discard Clip</button>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+
+                <div class="container col-lg-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-offset-0">
+                            <button type="button" class="btn btn-default btn-success">Start Recording</button>
+                        </div>
+
+                        <div class="col-12 col-sm-offset-1">
+                            <button type="button" class="btn btn-default btn-danger">Stop Recording</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+    {# <footer><p><a href="mailto:trey.slaughter@gmail.com">Contact Us</a></p></footer> #}
+{% endblock %}

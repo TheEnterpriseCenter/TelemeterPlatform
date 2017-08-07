@@ -1,0 +1,30 @@
+{% extends "layout.j2" %}
+{% block header %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {# We'll do an if logged in, then do this navbar, else
+                else do other #}
+            {%  include 'nav_bar_dev.j2' %}
+            {%  include 'nav_bar_index.j2' %}
+            {%  include 'search.j2' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="jumbotron">
+
+
+    {# michaelwashere #}
+    {# lets not forget to add contact info once we get it#}
+
+  <h1>Contact Information</h1>
+  <p>Contact Info Goes Here!</p>
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    {# <footer><p><a href="mailto:trey.slaughter@gmail.com">Contact Us</a></p></footer> #}
+{% endblock %}

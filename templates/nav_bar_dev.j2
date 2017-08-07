@@ -1,0 +1,57 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">DEV BAR</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+{#      <ul class="nav navbar-nav">#}
+{#        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>#}
+{#        <li><a href="#">Link</a></li>#}
+{#        <li class="dropdown">#}
+{#          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>#}
+{#          <ul class="dropdown-menu">#}
+{#            <li><a href="#">Action</a></li>#}
+{#            <li><a href="#">Another action</a></li>#}
+{#            <li><a href="#">Something else here</a></li>#}
+{#            <li role="separator" class="divider"></li>#}
+{#            <li><a href="#">Separated link</a></li>#}
+{#            <li role="separator" class="divider"></li>#}
+{#            <li><a href="#">One more separated link</a></li>#}
+{#          </ul>#}
+{#        </li>#}
+{#      </ul>#}
+      <ul class="nav navbar-nav navbar-right">
+
+
+        <li><a href="{{ url_for('teacher_start_session') }}">Teacher Start Session</a></li>
+        <li><a href="{{ url_for('admin_create_new_user') }}">Admin_Create_New_User</a></li>
+        <li><a href="{{ url_for('admin_delete_user') }}">Admin_Delete_Modify_User</a></li>
+        <li><a href="{{ url_for('admin_create_new_asset') }}">Create New Asset</a></li>
+        <li><a href="{{ url_for('admin_delete_asset') }}">Delete Asset</a></li>
+        <li><a href="{{ url_for('admin_delete_experiment') }}">Delete Experiment</a></li>
+        <li><a href="{{ url_for('admin_delete_tag') }}">Delete Experiment Tag</a></li>
+        <li><a href="{{ url_for('admin_delete_upload_acct') }}">Delete Upload Account</a></li>
+        <li><a href="{{ url_for('admin_modify_upload_acct') }}">Modify Upload Account</a></li>
+        <li><a href="{{ url_for('admin_create_new_upload_acct') }}">Add New Upload Account</a></li>
+        <li><a href="{{ url_for('tech_create_new_teacher') }}">Tech Add New Teacher</a></li>
+        <li><a href="{{ url_for('tech_modify_teacher') }}">Change Teacher Password(Search)</a></li>
+        <li><a href="{{ url_for('tech_change_teacher_password') }}">Tech_change_teacher_password</a></li>
+        <li><a href="{{ url_for('admin_login') }}">Admin Login</a></li>
+        <li><a href="{{ url_for('tech_login') }}">Technician Login</a></li>
+        <li><a href="{{ url_for('tech_start_session') }}">Tech Start Session</a></li>
+        <li><a href="{{ url_for('teacher_session') }}">Teacher Session</a></li>
+        <li><a href="{{ url_for('profile') }}">Profile</a></li>
+        <li><a href="{{ url_for('search_page') }}">Search Page</a></li>
+        <li><a href="{{ url_for('search_results') }}">Search Results</a></li>
+        <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

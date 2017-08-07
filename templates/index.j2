@@ -1,0 +1,14 @@
+{% extends "layout.j2" %}
+{% block header %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {# We'll do an if logged in, then do this navbar, else
+                else do other #}
+            {%  include 'nav_bar_default.j2' %}
+            {%  include 'search.j2' %}
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <footer><p><a href="mailto:trey.slaughter@gmail.com">Contact Us</a></p></footer>
+{% endblock %}

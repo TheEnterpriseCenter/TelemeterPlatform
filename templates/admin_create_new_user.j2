@@ -1,0 +1,72 @@
+{% extends "layout.j2" %}
+{% block header %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {# We'll do an if logged in, then do this navbar, else
+                else do other #}
+            {%  include 'nav_bar_default.j2' %}
+            {%  include 'search.j2' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="col-lg-offset-3 col-lg-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center">Profile Information</div>
+
+        <div class="panel-body">
+            <form class="form-horizontal" method="post">
+                <div class="form-group row">
+                    <label for="first" class="col-lg-4 col-md-5 control-label">First Name</label>
+                    <div class="col-lg-4 col-md-8">
+                        <input class="form-control" type="text" value="" id="first" name="first">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="last" class="col-lg-4 col-md-5 control-label">Last Name</label>
+                    <div class="col-lg-4 col-md-8">
+                        <input class="form-control" type="text" value="" id="last" name="last">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="phone" class="col-lg-4 col-md-5 control-label">Telephone Number</label>
+                    <div class="col-lg-4 col-md-8">
+                        <input class="form-control" type="text" value="" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-lg-4 col-md-5 control-label">Email</label>
+                    <div class="col-lg-4 col-md-8">
+                        <input class="form-control" type="text" value="" id="email" name="email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="org" class="col-lg-4 col-md-5 control-label">Organization</label>
+                    <div class="col-lg-4 col-md-8">
+                        <input class="form-control" type="text" value="" id="org" name="org">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-4 col-md-5 control-label">Role</label>
+                    <div class="col-lg-6 col-md-8">
+                        <label class="radio-inline"><input type="radio" name="role" value="teacher">Teacher</label>
+                        <label class="radio-inline"><input type="radio" name="role" value="technician">Technician</label>
+                        <label class="radio-inline"><input type="radio" name="role" value="admin">Administrator</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-offset-4 col-md-offset-5 col-lg-3 col-md-6">
+                        <button type="submit" class="btn btn-default mtc-btn">Create User</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+    {# <footer><p><a href="mailto:trey.slaughter@gmail.com">Contact Us</a></p></footer> #}
+{% endblock %}

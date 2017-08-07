@@ -1,0 +1,52 @@
+{% extends "layout.j2" %}
+{% block header %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {# We'll do an if logged in, then do this navbar, else
+                else do other #}
+            {%  include 'nav_bar_default.j2' %}
+            {%  include 'search.j2' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="col-lg-offset-3 col-lg-6">
+    <div class="panel panel-primary">
+        <div class="panel-heading text-center">Upload Account Information</div>
+        <div class="panel-body">
+            <form class="form-horizontal" method="post">
+
+                {# michaelwashere #}
+                {# I have no clue what information we have for assets. My pgAdmin table for assets is empty so I cannot give you a layout#}
+                {# however, some tips, #}
+                {# 1. only thing you should need to change to get appearance correct is the label#}
+                {# 2. I left the radio buttons on this page in case you wanted to use them, if you dont, I have marked what you need to delete#}
+                {# 3. To remove a label and field just delete the entire div, example below#}
+
+                <div class="form-group row">
+                    <label for="username" class="col-lg-4 col-md-5 control-label">Account Email</label>
+                    <div class="col-lg-4 col-md-8">
+                        <input class="form-control" type="text" value="" id="username" name="username">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password" class="col-lg-4 col-md-5 control-label">Account Password</label>
+                    <div class="col-lg-4 col-md-8">
+                        <input class="form-control" type="text" value="" id="password" name="password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-offset-4 col-md-offset-5 col-lg-3 col-md-6">
+                        <button type="submit" class="btn btn-default mtc-btn">Create Upload Account</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {# <footer><p><a href="mailto:trey.slaughter@gmail.com">Contact Us</a></p></footer> #}
+{% endblock %}

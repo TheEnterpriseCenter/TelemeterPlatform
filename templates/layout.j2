@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel=stylesheet href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel=stylesheet href="/static/flexbox/css/flexboxgrid.css">
+    <link rel=stylesheet href="/static/mycss/app.css">
+    <title>MTC4K</title>
+</head>
+<body>
+    <div class = "container-fluid">
+        <div class="row section-header">
+            <div class="col-md-12">
+                {% block header %}{% endblock %}
+            </div>
+        </div>
+        <div class = "row section-body">
+            <div class="col-md-12">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+{#        <div class = "container">#}
+{#            {% block leftside %}{% endblock %}#}
+{#        </div>#}
+{#        <div class = "container">#}
+{#            {% block rightside %}{% endblock %}#}
+{#        </div>#}
+        <div class="row section-footer">
+            <div class="col-md-12">
+                {% block footer %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+<script src="/static/jquery/jquery-3.2.0.js"></script>
+<script src="/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="/static/flexbox/js/index.js"></script>
+</body>
+</html>

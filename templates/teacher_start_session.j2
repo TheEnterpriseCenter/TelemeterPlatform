@@ -1,0 +1,37 @@
+{% extends "layout.j2" %}
+{% block header %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {# We'll do an if logged in, then do this navbar, else
+                else do other #}
+            {%  include 'nav_bar_default.j2' %}
+            {%  include 'search.j2' %}
+        </div>
+    </div>
+{% endblock %}
+{% block body %}
+
+
+{# Add a picture#}
+<div class= "container">
+    <div class="row section-body vertical-align">
+        <div class="col-lg-12 text-center">
+
+            <div class="jumbotron">
+                <h1>Welcome to the MTC4K System.</h1>
+                <p>Please click the button below to start a new session.</p>
+                <button type="button" class="btn btn-default mtc-btn">Start Session</button>
+
+                <h1></h1>
+
+                {# michaelwashere #}
+                {# this link is for the 'Teacher' manual#}
+                <p>Still getting familiar with the MTC4k System? Click <a href="" >Here</a> to download the system manual.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+    {# <footer><p><a href="mailto:trey.slaughter@gmail.com">Contact Us</a></p></footer> #}
+{% endblock %}

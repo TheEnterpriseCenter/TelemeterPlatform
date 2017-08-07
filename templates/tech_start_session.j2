@@ -1,0 +1,64 @@
+{% extends "layout.j2" %}
+{% block header %}
+    <div class="panel panel-default">
+        <div class="panel-body">
+            {# We'll do an if logged in, then do this navbar, else
+                else do other #}
+
+            {%  include 'nav_bar_index.j2' %}
+            {%  include 'nav_bar_tech.j2' %}
+            {%  include 'search.j2' %}
+            {%  include 'nav_bar_dev.j2' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+<div class ="container section-body vertical-align text-center">
+    <div class="col-lg-6 col-lg-offset-3">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Select a User / Institution</div>
+            <div class="panel-body">
+
+                <div class ="row">
+                    <div class="container">
+                        <div class="col-lg-6">
+                            <select class="form-control col-lg-6">
+                            {# michaelwashere #}
+                            {# put loop here to auto populate the drop down #}
+                            {# i recommend using the ID from the table that you can then put for the 'value' of the dropdown#}
+
+
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                                <option value="three">Three</option>
+                                <option value="four">Four</option>
+                                <option value="five">Five</option>
+
+                            {# end the loop here #}
+
+                            </select>
+                        </div>
+
+                        <div class="row">
+                                <div>
+                                    <button type="button" class="btn btn-default mtc-btn">Start Session</button>
+                                </div>
+                                <div class="col-lg-offset-1">
+                                    <button type="button" class="btn btn-default btn-danger">Stop Session</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+   {# <footer><p><a href="mailto:trey.slaughter@gmail.com">Contact Us</a></p></footer> #}
+{% endblock %}
